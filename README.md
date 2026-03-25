@@ -1,29 +1,14 @@
-# Astro Starter Kit: Minimal
+# Astro POC
 
-```sh
-npm create astro@latest -- --template minimal
-```
+## Things I want to do in this proof of concept
+-[ ] Test island architecture
+-[ ] Add a SSG page
+-[ ] Add a SSR component into the SSG page
+-[ ] Add a CSG React component inside the SSG page
+-[ ] Integrate it with a headless CMS for testing. (create another project for the CMS Sanity)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
+Made by following: https://docs.astro.build/en/tutorial/0-introduction/
 
 ## 🧞 Commands
 
