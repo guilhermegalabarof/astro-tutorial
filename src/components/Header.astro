@@ -1,0 +1,15 @@
+---
+import Menu from "./Menu.astro";
+import Navigation from "./Navigation.astro";
+---
+
+<!--
+- I don't know why split header and Navigation yet. maybe I will update this
+- also, this in mobile should become a hamburger menu, but I need to see accessibility rules for this.
+-->
+<header class="header">
+    <Menu />
+    <nav id="main-menu" class="nav-links">
+        <Navigation />
+    </nav>
+</header>
