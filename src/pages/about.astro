@@ -1,8 +1,6 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
 import Cool from "../components/Cool.astro";
-import "../styles/global.css";
-
-const pageTitle = "About Me";
 
 const myself = {
     firstName: "Guilherme",
@@ -25,41 +23,28 @@ const skills = [
 ];
 ---
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>{pageTitle}</title>
-    </head>
-    <body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
-        <h1>About</h1>
+<BaseLayout>
+    <h1>About</h1>
 
-        <p>Here are a few facts about me:</p>
-        <!-- @todo can Cool have a children?? -->
-        <Cool isCool={isCool} />
-        <ul>
-            <li>My name is {myself.firstName} .</li>
-            <li>
-                I live in {myself.country} and I work as a {myself.occupation}.
-            </li>
-            {
-                myself.hobbies.length >= 2 && (
-                    <li>
-                        Two of my hobbies are: {myself.hobbies[0]} and{" "}
-                        {myself.hobbies[1]}
-                    </li>
-                )
-            }
-        </ul>
-        <p>My skills are:</p>
-        <ul>
-            {skills.map((skill) => <li>{skill}</li>)}
-        </ul>
-    </body>
-</html>
+    <p>Here are a few facts about me:</p>
+    <Cool isCool={isCool} />
+
+    <ul>
+        <li>My name is {myself.firstName} .</li>
+        <li>
+            I live in {myself.country} and I work as a {myself.occupation}.
+        </li>
+        {
+            myself.hobbies.length >= 2 && (
+                <li>
+                    Two of my hobbies are: {myself.hobbies[0]} and{" "}
+                    {myself.hobbies[1]}
+                </li>
+            )
+        }
+    </ul>
+    <p>My skills are:</p>
+    <ul>
+        {skills.map((skill) => <li>{skill}</li>)}
+    </ul>
+</BaseLayout>

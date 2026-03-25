@@ -1,4 +1,5 @@
 ---
+  layout: ../../layouts/MarkdownPostLayout.astro
   title: 'Trying Astro content-driven framework'
   pubDate: 2026-25-03
   description: 'This is the first post of my life :3'
@@ -19,3 +20,15 @@ The first part of tutorial was simples.
 create, publish, configure server, push.
 
 in netfily I had to change a configuration to get the /dist as publish directory.
+
+the major thing is that this remember me a lot of building websites back in the agency day (ten years ago). which was in my personal opnion, much more fun to develop.
+
+that said, I think astro deal quiet well with the complexity of choosing to render server or client side.
+
+also noting, netlify is consuming fast, I should not commit to master - creating a new branch to do PR instead .
+
+
+things:
+- children: seems to be here as slots, something similar to Outlet from material-ui.
+
+- one layout: I think because every page is a page, like MPA should be, the layout cannot be imported and used for every singles page perhaps?

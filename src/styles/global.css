@@ -1,3 +1,7 @@
+:root {
+    --primaryColor: #fab1a0;
+}
+
 html,
 body {
     margin: 0;
@@ -24,11 +28,10 @@ h1 {
 }
 
 .header {
-    padding: 0 1rem;
+    padding: 16px;
     background-color: var(--primaryColor);
     display: flex;
     align-items: center;
-    padding: 1rem;
     gap: 16px;
 }
 
