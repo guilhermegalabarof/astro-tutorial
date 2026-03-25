@@ -19,6 +19,3 @@ The first part of tutorial was simples.
 create, publish, configure server, push.
 
 in netfily I had to change a configuration to get the /dist as publish directory.
-
-
-how to list all posts without explicit markup for each?
