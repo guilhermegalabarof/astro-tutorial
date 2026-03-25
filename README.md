@@ -2,16 +2,20 @@
 
 
 ## current problems
-- [ ] import styles global each page is not good enought. missing layout file
+- [x] import styles global each page is not good enought. missing layout file
+  - yep astro has layout and slots.
+- [ ] typescript missing for things, posts in blog for example
+- [ ] Can I develop this with feature folder structure?
 
 ## Things I want to do in this proof of concept
 - [ ] Test island architecture
-- [ ] Add a SSG page
+- [x] Add a SSG page - this default.
 - [ ] Add a SSR component into the SSG page
 - [ ] Add a CSG React component inside the SSG page
 - [ ] Integrate it with a headless CMS for testing. (create another project for the CMS Sanity)
 - [ ] share data across pages like state management?
 - [ ] can I connect a folder of Obsidian (that is in github) to my personal blog as content, they are MD files?
+- [ ] use cool lib like daisyUi (I want to try this one for a while)
 
 
 Made by following: https://docs.astro.build/en/tutorial/0-introduction/

@@ -7,7 +7,7 @@
   image:
       url: 'https://static.boredpanda.com/blog/wp-content/uploads/2025/10/funny-cat-memes-go-hard-cover_675.jpg'
       alt: 'Funny meme cat that looks suspicious.'
-  tags: ["astro", "blogging", "learning in public", "study"]
+  tags: ["software", "frontend"]
 ---
 
 #Astro
@@ -27,6 +27,7 @@ that said, I think astro deal quiet well with the complexity of choosing to rend
 
 also noting, netlify is consuming fast, I should not commit to master - creating a new branch to do PR instead .
 
+vite is fundamental for Astro to use it's own files as data, importing posts from posts folder is awesome.
 
 things:
 - children: seems to be here as slots, something similar to Outlet from material-ui.

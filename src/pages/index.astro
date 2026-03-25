@@ -1,22 +1,19 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const primaryColor = "#fab1a0";
 ---
 
-<style define:vars={{ primaryColor }}>
+<style>
     h1 {
         font-weight: bold;
         font-size: 6rem;
     }
-    .block {
-        background-color: #fab1a0;
-        padding: 2rem;
-    }
 </style>
 
-<BaseLayout title="Eu">
-    <div class="block">
-        <h1>Astro is fine :)</h1>
-        <p>Hi, I am Guilherme Galabarof</p>
-    </div>
+<BaseLayout title="Guilherme Galabarof">
+    <main>
+        <div class="section --yellow">
+            <h1>Astro is fine :)</h1>
+            <p>Hi, I am Guilherme Galabarof</p>
+        </div>
+    </main>
 </BaseLayout>

@@ -1,17 +1,29 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
+import BlogTags from "../components/BlogTags.astro";
+
+const allPosts = Object.values(
+    import.meta.glob("./posts/*.md", { eager: true }),
+);
 ---
 
-<BaseLayout>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-
-    <div class="block">
-        <h1>My personal tech posts</h1>
-    </div>
-
-    <ul>
-        <li><a href="/posts/introduction/">Post 1</a></li>
-    </ul>
+<BaseLayout title="Things I wrote">
+    <main>
+        <div class="content">
+            <h1>Things I wrote:</h1>
+            <ul>
+                {
+                    allPosts.map((post: any) => (
+                        <BlogPost url={post.url}>
+                            {post.frontmatter.title}
+                        </BlogPost>
+                    ))
+                }
+            </ul>
+        </div>
+        <section class="section --yellow">
+            <BlogTags />
+        </section>
+    </main>
 </BaseLayout>

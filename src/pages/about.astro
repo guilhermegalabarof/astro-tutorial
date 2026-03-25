@@ -23,28 +23,29 @@ const skills = [
 ];
 ---
 
-<BaseLayout>
-    <h1>About</h1>
+<BaseLayout title="About">
+    <div class="content">
+        <h1>About</h1>
+        <p>Here are a few facts about me:</p>
+        <Cool isCool={isCool} />
 
-    <p>Here are a few facts about me:</p>
-    <Cool isCool={isCool} />
-
-    <ul>
-        <li>My name is {myself.firstName} .</li>
-        <li>
-            I live in {myself.country} and I work as a {myself.occupation}.
-        </li>
-        {
-            myself.hobbies.length >= 2 && (
-                <li>
-                    Two of my hobbies are: {myself.hobbies[0]} and{" "}
-                    {myself.hobbies[1]}
-                </li>
-            )
-        }
-    </ul>
-    <p>My skills are:</p>
-    <ul>
-        {skills.map((skill) => <li>{skill}</li>)}
-    </ul>
+        <ul>
+            <li>My name is {myself.firstName} .</li>
+            <li>
+                I live in {myself.country} and I work as a {myself.occupation}.
+            </li>
+            {
+                myself.hobbies.length >= 2 && (
+                    <li>
+                        Two of my hobbies are: {myself.hobbies[0]} and{" "}
+                        {myself.hobbies[1]}
+                    </li>
+                )
+            }
+        </ul>
+        <p>My skills are:</p>
+        <ul>
+            {skills.map((skill) => <li>{skill}</li>)}
+        </ul>
+    </div>
 </BaseLayout>

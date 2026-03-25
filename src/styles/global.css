@@ -1,11 +1,15 @@
 :root {
     --primaryColor: #fab1a0;
+    --secondaryColor: #0984e3;
+    --yellowColor: #fdcb6e;
+    --textColor: #111;
 }
 
 html,
 body {
     margin: 0;
     padding: 0;
+    color: var(--textColor);
 }
 html {
     background-color: #f1f5f9;
@@ -59,16 +63,14 @@ h1 {
 .nav-links a {
     padding: 0.25rem;
     /*keep contrast for accessibility*/
-    color: midnightblue;
     /*keeping underline for accessibility*/
     text-decoration: none;
     transition: all 0.25s;
-    border: 2px solid transparent;
-    border-bottom: 2px solid #fff;
-    border-radius: 0.25rem;
+    color: midnightblue;
+    background-image: linear-gradient(120deg, #fff, #fff);
 }
 .nav-links a:hover {
-    border: 2px solid #fff;
+    color: #111;
 }
 
 :has(.menu[aria-expanded="true"]) .nav-links {
@@ -92,4 +94,53 @@ h1 {
     .menu {
         display: none;
     }
+}
+
+li {
+    list-style: none;
+}
+
+/*this is cool, I should use in all application and extract this logic as component or class    */
+a {
+    color: var(--textColor);
+    text-decoration: none;
+    background-color: transparent;
+    background-image: linear-gradient(120deg, #111, #111);
+    background-position: 0 90%;
+    background-repeat: no-repeat;
+    background-size: 100% 0.05em;
+    padding: 0.5em 0.1em;
+    transition:
+        background-size 0.1s ease-in,
+        color 0.1s ease-in;
+}
+
+a:hover {
+    color: #fff;
+    background-size: 100% 100%;
+}
+
+ul {
+    padding: 0;
+}
+
+.content {
+    padding: 2rem;
+    background-color: #dfe6e9;
+}
+
+.section {
+    background-color: var(--yellowColor);
+    padding: 2rem;
+}
+.section.--yellow {
+    background-color: var(--yellowColor);
+}
+
+footer {
+    padding: 16px;
+    background-color: var(--secondaryColor);
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }

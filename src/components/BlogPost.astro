@@ -1,0 +1,9 @@
+---
+const { url } = Astro.props;
+---
+
+<li style="font-size: 2rem">
+    <a href={url}>
+        <slot />
+    </a>
+</li>
