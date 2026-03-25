@@ -1,11 +1,17 @@
 # Astro POC
 
+
+## current problems
+- [ ] import styles global each page is not good enought. missing layout file
+
 ## Things I want to do in this proof of concept
--[ ] Test island architecture
--[ ] Add a SSG page
--[ ] Add a SSR component into the SSG page
--[ ] Add a CSG React component inside the SSG page
--[ ] Integrate it with a headless CMS for testing. (create another project for the CMS Sanity)
+- [ ] Test island architecture
+- [ ] Add a SSG page
+- [ ] Add a SSR component into the SSG page
+- [ ] Add a CSG React component inside the SSG page
+- [ ] Integrate it with a headless CMS for testing. (create another project for the CMS Sanity)
+- [ ] share data across pages like state management?
+- [ ] can I connect a folder of Obsidian (that is in github) to my personal blog as content, they are MD files?
 
 
 Made by following: https://docs.astro.build/en/tutorial/0-introduction/

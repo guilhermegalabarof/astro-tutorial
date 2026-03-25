@@ -1,5 +1,7 @@
 ---
-
+import Navigation from "../components/Navigation.astro";
+import "../styles/global.css";
+const primaryColor = "#fab1a0";
 ---
 
 <html lang="en">
@@ -9,12 +11,24 @@
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
-        <title>Astro</title>
+        <title>Guilherme Galabarof</title>
+
+        <style define:vars={{ primaryColor }}>
+            h1 {
+                font-weight: bold;
+                font-size: 6rem;
+            }
+            .block {
+                background-color: #fab1a0;
+                padding: 2rem;
+            }
+        </style>
     </head>
     <body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
-        <h1>Astro is fine :)</h1>
+        <Navigation />
+        <div class="block">
+            <h1>Astro is fine :)</h1>
+            <p>Hi, I am Guilherme Galabarof</p>
+        </div>
     </body>
 </html>
