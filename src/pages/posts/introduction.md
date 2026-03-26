@@ -33,3 +33,10 @@ things:
 - children: seems to be here as slots, something similar to Outlet from material-ui.
 
 - one layout: I think because every page is a page, like MPA should be, the layout cannot be imported and used for every singles page perhaps?
+
+
+
+This contains a full working blog, that use Vite to read all it's containing files.
+It has a plugin to generate rss file.
+
+it uses a cool routing structure similar to next.js
