@@ -11,7 +11,7 @@
 - [ ] Test island architecture
 - [x] Add a SSG page - this default.
 - [ ] Add a SSR component into the SSG page
-- [ ] Add a CSG React component inside the SSG page
+- [x] Add a CSG React component inside the SSG page
 - [ ] Integrate it with a headless CMS for testing. (create another project for the CMS Sanity)
 - [ ] share data across pages like state management?
 - [ ] can I connect a folder of Obsidian (that is in github) to my personal blog as content, they are MD files?
