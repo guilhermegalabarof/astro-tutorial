@@ -1,38 +1,22 @@
 ---
-import Header from "../components/Header.astro";
-import "../styles/global.css";
-const primaryColor = "#fab1a0";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import RandomDuck from "../components/RandomDuck.jsx";
 ---
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>Guilherme Galabarof</title>
+<style>
+    h1 {
+        font-weight: bold;
+        font-size: 6rem;
+    }
+</style>
 
-        <style define:vars={{ primaryColor }}>
-            h1 {
-                font-weight: bold;
-                font-size: 6rem;
-            }
-            .block {
-                background-color: #fab1a0;
-                padding: 2rem;
-            }
-        </style>
-    </head>
-    <body>
-        <Header />
-        <div class="block">
+<BaseLayout title="Guilherme Galabarof">
+    <main>
+        <div class="section --yellow">
             <h1>Astro is fine :)</h1>
             <p>Hi, I am Guilherme Galabarof</p>
+            <p>And this below is a react component getting new ducks</p>
+            <RandomDuck client:load />
         </div>
-    </body>
-</html>
-
-<script>
-    import "../scripts/menu.js";
-</script>
+    </main>
+</BaseLayout>

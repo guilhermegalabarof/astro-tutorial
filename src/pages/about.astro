@@ -1,8 +1,6 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
 import Cool from "../components/Cool.astro";
-import "../styles/global.css";
-
-const pageTitle = "About Me";
 
 const myself = {
     firstName: "Guilherme",
@@ -25,24 +23,12 @@ const skills = [
 ];
 ---
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>{pageTitle}</title>
-    </head>
-    <body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
+<BaseLayout title="About">
+    <div class="content">
         <h1>About</h1>
-
         <p>Here are a few facts about me:</p>
-        <!-- @todo can Cool have a children?? -->
         <Cool isCool={isCool} />
+
         <ul>
             <li>My name is {myself.firstName} .</li>
             <li>
@@ -61,5 +47,5 @@ const skills = [
         <ul>
             {skills.map((skill) => <li>{skill}</li>)}
         </ul>
-    </body>
-</html>
+    </div>
+</BaseLayout>

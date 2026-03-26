@@ -1,0 +1,36 @@
+---
+const allPosts = Object.values(
+    import.meta.glob("../pages/posts/*.md", { eager: true }),
+);
+
+const tags = [
+    ...new Set(allPosts.flatMap((post: any) => post.frontmatter.tags)),
+];
+
+console.log("all tags", tags);
+---
+
+<style>
+    a {
+        color: #00539f;
+    }
+
+    .tag {
+        font-size: 1.15em;
+    }
+
+    .block {
+        background-color: var(--yellowColor);
+        padding: 2rem;
+    }
+</style>
+
+<ul class="tags">
+    {
+        tags.map((tag) => (
+            <li class="tag">
+                <a href={`/tags/${tag}`}>{tag}</a>
+            </li>
+        ))
+    }
+</ul>
